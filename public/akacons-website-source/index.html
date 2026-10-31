@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="/akacons-website-source/">
+<title>AKACONS – Đơn vị thi công sơn hiệu ứng chuyên nghiệp</title>
+<meta name="description" content="AKACONS – Kiến tạo giá trị trên từng bề mặt. Hơn 10 năm kinh nghiệm thi công sơn hiệu ứng cùng Vingroup, Petrolimex, Regal Group.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500&amp;display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="root" class="first" style="background: #0D1D37; color: #F4F6F9; font-family: Kanit, system-ui, sans-serif; font-weight: 300; width: 100%; overflow: clip; position: relative;">
+<div class="story-progress" aria-hidden="true"><span id="story-progress-bar"></span></div>
+
+<!-- TRANG CHỜ TẢI -->
+<div class="loader" aria-hidden="true">
+<div class="ldr-inner">
+<div class="ldr-glow"><img class="ldr-logo" src="assets/img/logo.png" alt=""><div class="ldr-shine"></div></div>
+<div class="ldr-bar"></div>
+<div class="ldr-tag">Kiến tạo giá trị trên từng bề mặt</div>
+</div>
+</div>
+
+<!-- RÈM CHUYỂN TRANG -->
+<div class="pg-curtain" id="curtain" aria-hidden="true"><img class="pc-logo" src="assets/img/logo.png" alt=""></div>
+
+<!-- ĐẦU TRANG -->
+<header class="site-head ld-down">
+<div class="wrap" style="display: flex; align-items: center; justify-content: space-between; height: 88px; gap: 24px;">
+<a href="#trang-chu" aria-label="AKACONS – Trang chủ" style="display: flex; align-items: center;"><img src="assets/img/logo.png" alt="AKACONS" style="height: 34px; width: auto; display: block;"></a>
+<nav class="nav-links" id="nav-main" aria-label="Điều hướng chính" style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;"></nav>
+<div style="display: flex; align-items: center; gap: 20px;">
+<button type="button" class="sbtn" data-action="open-search" aria-label="Tìm kiếm trong website"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+<a href="#surface-studio" class="btn-solid head-cta" data-nav="studio" style="padding: 10px 18px; min-height: 44px; font-size: 13px; gap: 10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>Surface Studio</a>
+<button type="button" class="burger" data-action="toggle-menu" aria-label="Mở menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+</div>
+</div>
+</header>
+
+<!-- MENU ĐIỆN THOẠI -->
+<div class="mmenu" id="mmenu" role="dialog" aria-label="Menu" hidden>
+<button type="button" class="burger" data-action="toggle-menu" aria-label="Đóng menu" style="position: absolute; top: 20px; right: 20px; display: flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+<a href="#trang-chu" class="mm-link">Trang chủ</a>
+<div id="nav-mobile"></div>
+<a href="#surface-studio" class="mm-link" style="color: #3FB8B5;">Surface Studio</a>
+<a href="tel:0568717712" style="margin-top: 32px; font-size: 20px; color: #3FB8B5; text-decoration: none;">0568.717.712</a>
+</div>
+
+<!-- TÌM KIẾM -->
+<div class="srch" id="srch" role="dialog" aria-label="Tìm kiếm trong website" hidden>
+<div class="wrap" style="padding-top: 40px; padding-bottom: 80px;">
+<div style="display: flex; justify-content: space-between; align-items: center; height: 48px;">
+<img src="assets/img/logo.png" alt="AKACONS" style="height: 30px; width: auto;">
+<button type="button" class="sbtn" data-action="close-search" aria-label="Đóng tìm kiếm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+</div>
+<div style="max-width: 960px; margin: 72px auto 0;">
+<label for="site-q" class="eyebrow" style="display: block;">Tìm kiếm</label>
+<input id="site-q" class="srch-input" type="search" placeholder="Nhập từ khóa, ví dụ: Travertine, bảo hành..." autocomplete="off">
+<div id="sr-suggest-wrap">
+<p style="margin: 32px 0 16px; font-size: 13px; color: #B7C2D4; letter-spacing: 0.1em; text-transform: uppercase;">Gợi ý tìm kiếm</p>
+<div id="sr-suggest" style="display: flex; gap: 10px; flex-wrap: wrap;"></div>
+</div>
+<div id="sr-results-wrap" hidden>
+<p id="sr-count" style="margin: 32px 0 8px; font-size: 14px; color: #B7C2D4;"></p>
+<div id="sr-results"></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ======================= TRANG CHỦ ======================= -->
+<main class="page" id="trang-chu" data-page="home">
+
+<section style="position: relative; min-height: 100vh; box-sizing: border-box; padding: 168px 0 0; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;">
+<h1 class="sr-only">AKACONS – Đơn vị thi công sơn hiệu ứng chuyên nghiệp</h1>
+<div id="hero-bgs"></div>
+<div class="hero-bg"></div>
+<div class="wrap" style="position: relative; z-index: 2;">
+<div class="hero-mid" style="display: flex; flex-direction: column; justify-content: center; min-height: 52vh; position: relative;">
+<div class="hs-ctrl ld ld-5" style="position: absolute; right: 0; bottom: 72px; display: flex; align-items: center; gap: 12px;">
+<span style="font-size: 15px; letter-spacing: 0.08em; margin-right: 12px;"><span id="hero-no" style="color: #FFFFFF;">01</span><span style="color: rgba(244,246,249,0.6);"> / 06</span></span>
+<button type="button" class="hs-arrow" data-action="prev-slide" aria-label="Slide trước"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+<button type="button" class="hs-arrow" data-action="next-slide" aria-label="Slide tiếp theo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+</div>
+<div class="hero-text" style="padding-bottom: 72px;">
+<div class="stack ld ld-1" id="hero-texts"></div>
+<div class="ld ld-3" style="display: flex; gap: 12px; margin-top: 40px; flex-wrap: wrap;">
+<a href="#lien-he" class="btn-solid">Nhận tư vấn<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<a href="#du-an" class="btn-line">Xem dự án</a>
+</div>
+</div>
+</div>
+</div>
+<div class="wrap ld ld-4" style="position: relative; z-index: 2;">
+<div class="g-6" id="hero-tabs"></div>
+</div>
+</section>
+
+<!-- Giới thiệu ngắn -->
+<section id="ve-akacons" class="sec-bg bg-about story-chapter story-about" style="padding: 150px 0 140px;">
+<div class="wrap">
+<div class="g-2" style="gap: 80px; align-items: center;">
+<div class="rv-clip zoom story-visual" style="position: relative;">
+<img src="assets/img/eefe86ce62ceddce5feec63be97c1ec9.jpg" alt="Đội ngũ AKACONS họp triển khai tại văn phòng" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;">
+</div>
+<div>
+<p class="eyebrow rv">Về AKACONS</p>
+<h2 class="sec-h rv d1">Sơn hiệu ứng là linh hồn trong tổng thể kiến trúc</h2>
+<p class="lead rv d2" style="margin-top: 28px;">Hơn 10 năm tích luỹ kinh nghiệm thi công xây dựng cùng Vingroup, Petrolimex và Regal Group. AKACONS mang chuẩn mực thi công của những đại dự án ấy đến với không gian sống của mỗi gia đình.</p>
+<div class="rv d3" style="margin-top: 40px;"><a href="#ve-chung-toi" class="more">Tìm hiểu về chúng tôi<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<div class="about-stats" aria-label="AKACONS qua những con số">
+<div class="about-stat"><strong data-count="1000" data-decimals="0"><span class="count-value">1000</span><span>+</span></strong><i></i><p>căn hộ, dự án, công trình đã thực hiện</p></div>
+<div class="about-stat"><strong data-count="1.5" data-decimals="1"><span class="count-value">1,5</span><small> triệu</small><span>+</span></strong><i></i><p>m² sơn hiệu ứng hoàn thiện</p></div>
+<div class="about-stat"><strong data-count="20" data-decimals="0"><span class="count-value">20</span><span>+</span></strong><i></i><p>tỉnh thành</p></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Dịch vụ tóm tắt -->
+<section class="sec-bg bg-services story-chapter story-services" style="padding: 150px 0;">
+<div class="wrap">
+<div style="display: flex; justify-content: space-between; align-items: end; gap: 40px; flex-wrap: wrap; margin-bottom: 64px;">
+<div>
+<p class="eyebrow rv">Dịch vụ</p>
+<h2 class="sec-h rv d1">Hai cách để chọn<br>bề mặt cho ngôi nhà</h2>
+</div>
+<a href="#dich-vu" class="more rv d2">Xem chi tiết dịch vụ<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+<div class="g-2" style="gap: 40px;">
+<a href="#dich-vu" class="card rv-l" style="position: relative; border: 1px solid rgba(255,255,255,0.14); display: block; text-decoration: none; color: inherit;">
+<div class="zoom" style="height: 420px;"><img src="assets/img/636f28faa09a4491dd37d575029ba680.jpg" alt="Phòng mẫu bộ sưu tập Heritage" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+<div style="padding: 32px 36px 36px;"><h3 style="margin: 0; font-size: 42px; line-height: 48px; font-weight: 200; color: #FFFFFF;">Heritage</h3><p style="margin: 8px 0 0; font-size: 16px; color: #B7C2D4;">Bộ sưu tập màu sắc và hiệu ứng có sẵn</p></div>
+</a>
+<a href="#dich-vu" class="card rv-r" style="position: relative; border: 1px solid rgba(255,255,255,0.14); display: block; text-decoration: none; color: inherit;">
+<div class="zoom" style="height: 420px;"><img src="assets/img/1f72f9e9b93905513c961bebfcaab815.jpg" alt="Cột sơn hiệu ứng thiết kế riêng" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+<div style="padding: 32px 36px 36px;"><h3 style="margin: 0; font-size: 42px; line-height: 48px; font-weight: 200; color: #FFFFFF;">Bespoke</h3><p style="margin: 8px 0 0; font-size: 16px; color: #B7C2D4;">Màu sắc và hiệu ứng thiết kế riêng</p></div>
+</a>
+</div>
+</div>
+</section>
+
+<!-- Dự án tiêu biểu -->
+<section class="sec-bg bg-projects story-chapter story-projects" style="padding: 150px 0 160px;">
+<div class="wrap">
+<div style="display: flex; justify-content: space-between; align-items: end; gap: 40px; flex-wrap: wrap; margin-bottom: 64px;">
+<div>
+<p class="eyebrow rv">Dự án tiêu biểu</p>
+<h2 class="sec-h rv d1">Công trình đã hoàn thiện</h2>
+</div>
+<a href="#du-an" class="btn-line rv d2">Tất cả dự án<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+</div>
+<div class="pj-marquee rv-fade" id="pj-marquee" aria-label="Các công trình tiêu biểu của AKACONS">
+<div class="pj-track" id="pj-track"></div>
+</div>
+</section>
+
+<!-- Quy trình tóm tắt -->
+<section class="sec-bg bg-process story-chapter story-process home-process" style="padding: 150px 0;">
+<div class="wrap">
+<div style="display: flex; justify-content: space-between; align-items: end; gap: 40px; flex-wrap: wrap; margin-bottom: 56px;">
+<div style="max-width: 720px;">
+<p class="eyebrow rv">Quy trình</p>
+<h2 class="sec-h rv d1">Tổ chức và quản lý thi công chuyên nghiệp</h2>
+</div>
+<a href="#quy-trinh" class="more rv d2">Xem quy trình chi tiết<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+<div class="g-3" id="home-steps" style="column-gap: 40px;"></div>
+</div>
+</section>
+
+</main>
+
+<!-- ======================= VỀ CHÚNG TÔI ======================= -->
+<main class="page" id="ve-chung-toi" data-page="about" hidden>
+<section class="ph ph-about">
+<div class="wrap" style="width: 100%;">
+<p class="crumb ld ld-1"><a href="#trang-chu">Trang chủ</a> / Về chúng tôi</p>
+<h1 class="ld ld-2">Về AKACONS</h1>
+<p class="ld ld-3" style="margin: 24px 0 0; max-width: 560px; font-size: 18px; line-height: 30px; color: #D5DCE6;">Đơn vị thi công sơn hiệu ứng chuyên nghiệp, với định hướng “Kiến tạo giá trị trên từng bề mặt”.</p>
+</div>
+</section>
+
+<section class="sec-bg bg-about" style="padding: 150px 0 140px;">
+<div class="wrap">
+<div class="g-2" style="gap: 80px; align-items: start;">
+<div>
+<p class="eyebrow rv">Câu chuyện</p>
+<h2 class="sec-h rv d1">Sơn hiệu ứng là linh hồn trong tổng thể kiến trúc</h2>
+<div class="rv-clip zoom" style="margin-top: 56px;"><img src="assets/img/eefe86ce62ceddce5feec63be97c1ec9.jpg" alt="Đội ngũ AKACONS họp triển khai tại văn phòng" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;"></div>
+</div>
+<div style="padding-top: 8px;">
+<p class="rv" style="margin: 0; font-size: 22px; line-height: 36px; color: #F4F6F9;">AKACONS là đơn vị thi công sơn hiệu ứng chuyên nghiệp, với hơn 10 năm tích luỹ kinh nghiệm thi công xây dựng.</p>
+<p class="lead rv d1" style="margin-top: 28px;">Năng lực của chúng tôi đã được kiểm chứng qua hàng loạt siêu dự án cùng những chủ đầu tư hàng đầu Việt Nam như Vingroup, Petrolimex và Regal Group. AKACONS ra đời để mang chuẩn mực thi công của những đại dự án ấy đến với không gian sống của mỗi gia đình.</p>
+<p class="lead rv d2" style="margin-top: 20px;">Chúng tôi tin rằng một bề mặt hoàn thiện đẹp không chỉ đến từ tay nghề của người thợ, mà là kết quả của việc hiểu đúng thiết kế, lựa chọn đúng giải pháp, kiểm soát kỹ thuật chặt chẽ và tổ chức thi công chuyên nghiệp.</p>
+<div style="margin-top: 56px;">
+<div class="rv-line" style="height: 1px; background: rgba(255,255,255,0.14);"></div>
+<div class="rv lnk-row" style="display: flex; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.14); gap: 16px;"><span style="color: #B7C2D4; font-size: 15px;">Đối tác chủ đầu tư</span><span style="font-size: 16px; color: #F4F6F9; text-align: right;">Vingroup · Petrolimex · Regal Group</span></div>
+<div class="rv d1 lnk-row" style="display: flex; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.14); gap: 16px;"><span style="color: #B7C2D4; font-size: 15px;">Kinh nghiệm</span><span style="font-size: 16px; color: #F4F6F9;">Hơn 10 năm</span></div>
+<div class="rv d2 lnk-row" style="display: flex; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.14); gap: 16px;"><span style="color: #B7C2D4; font-size: 15px;">Lĩnh vực</span><span style="font-size: 16px; color: #F4F6F9; text-align: right;">Sơn hiệu ứng cho công trình dân dụng</span></div>
+</div>
+</div>
+</div>
+<div class="g-4" style="margin-top: 120px;">
+<div class="rv" style="padding: 28px 24px 8px 0; border-top: 1px solid rgba(255,255,255,0.14);"><div style="font-size: 13px; color: #3FB8B5; letter-spacing: 0.1em;">01</div><div style="margin-top: 10px; font-size: 19px; color: #F4F6F9;">Hiểu đúng thiết kế</div></div>
+<div class="rv d1" style="padding: 28px 24px 8px 0; border-top: 1px solid rgba(255,255,255,0.14);"><div style="font-size: 13px; color: #3FB8B5; letter-spacing: 0.1em;">02</div><div style="margin-top: 10px; font-size: 19px; color: #F4F6F9;">Lựa chọn đúng giải pháp</div></div>
+<div class="rv d2" style="padding: 28px 24px 8px 0; border-top: 1px solid rgba(255,255,255,0.14);"><div style="font-size: 13px; color: #3FB8B5; letter-spacing: 0.1em;">03</div><div style="margin-top: 10px; font-size: 19px; color: #F4F6F9;">Kiểm soát kỹ thuật chặt chẽ</div></div>
+<div class="rv d3" style="padding: 28px 0 8px 0; border-top: 1px solid rgba(255,255,255,0.14);"><div style="font-size: 13px; color: #3FB8B5; letter-spacing: 0.1em;">04</div><div style="margin-top: 10px; font-size: 19px; color: #F4F6F9;">Tổ chức thi công chuyên nghiệp</div></div>
+</div>
+</div>
+</section>
+
+<section class="mission-bg" style="padding: 160px 0;">
+<div class="wrap">
+<div style="max-width: 620px;">
+<div style="padding-bottom: 56px;">
+<p class="eyebrow rv" style="margin-bottom: 20px;">Sứ mệnh</p>
+<h2 class="rv d1" style="margin: 0; font-size: 40px; line-height: 50px; font-weight: 200; color: #FFFFFF;">Thi công chất lượng, minh bạch và đáng tin cậy cho mỗi ngôi nhà</h2>
+<p class="rv d2" style="margin: 20px 0 0; font-size: 17px; line-height: 30px; color: #D5DCE6;">Kết hợp năng lực kỹ thuật, quy trình quản lý và dịch vụ chuyên nghiệp để mang lại sự an tâm cho gia chủ trong suốt quá trình thi công, với bề mặt hoàn thiện tinh xảo và bền đẹp theo thời gian.</p>
+</div>
+<div class="rv-line" style="height: 1px; background: rgba(255,255,255,0.18);"></div>
+<div style="padding-top: 56px;">
+<p class="eyebrow rv" style="margin-bottom: 20px;">Tầm nhìn</p>
+<h2 class="rv d1" style="margin: 0; font-size: 40px; line-height: 50px; font-weight: 200; color: #FFFFFF;">Định hình chuẩn mực mới cho ngành thi công sơn hiệu ứng tại Việt Nam</h2>
+<p class="rv d2" style="margin: 20px 0 0; font-size: 17px; line-height: 30px; color: #D5DCE6;">Một mô hình nhà thầu chuyên ngành được chuẩn hóa từ kỹ thuật, chất lượng đến dịch vụ, nơi năng lực không chỉ được đánh giá bằng tay nghề mà còn bằng khả năng tổ chức, kiểm soát và đồng hành cùng gia chủ.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec-bg bg-services" style="padding: 150px 0;">
+<div class="wrap">
+<div style="display: flex; justify-content: space-between; align-items: end; gap: 40px; flex-wrap: wrap; margin-bottom: 56px;">
+<div>
+<p class="eyebrow rv">Đội ngũ</p>
+<h2 class="sec-h rv d1">Một đội ngũ, một chuẩn mực</h2>
+</div>
+<p class="lead rv d2" style="max-width: 460px;">Mỗi công trình có cán bộ kỹ thuật phụ trách và đội thợ phù hợp với quy mô. Đội thợ mặc đồng phục, làm việc theo quy chuẩn tác phong của AKACONS.</p>
+</div>
+<div class="rv-clip zoom"><img src="assets/img/cab02fa39fea23a29a720236e2b99326.jpg" alt="Đội ngũ nhân sự AKACONS" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;"></div>
+</div>
+</section>
+
+<section class="sec-bg bg-letter" style="padding: 160px 0;">
+<div class="wrap">
+<div class="g-2" style="gap: 80px; align-items: center;">
+<div class="rv-clip" style="position: relative; height: 560px; overflow: hidden;">
+<img class="par" src="assets/img/3644238f211fc16dde937d778c80dd11.jpg" alt="Mảng tường sơn hiệu ứng dưới ánh sáng" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+</div>
+<div>
+<p class="eyebrow rv">Thư ngỏ</p>
+<p class="rv d1" style="margin: 0; font-size: 34px; line-height: 48px; font-weight: 200; color: #FFFFFF;">Mỗi bức tường hoàn thiện không chỉ cần đẹp ngay ngày bàn giao, mà còn phải bền đẹp theo năm tháng.</p>
+<p class="lead rv d2" style="margin-top: 32px;">Ngôi nhà là nơi gửi gắm tâm huyết và kỳ vọng của cả gia đình. Với định hướng “Kiến tạo giá trị trên từng bề mặt”, AKACONS chuẩn hóa quy trình, nâng cao tay nghề đội ngũ và kiểm soát chất lượng ở từng giai đoạn, để ý tưởng của Quý Gia Chủ được hiện thực hóa đúng như kỳ vọng.</p>
+<div class="rv d3" style="margin-top: 40px; display: flex; align-items: center; gap: 20px;"><div class="rv-line" style="width: 56px; height: 1px; background: #3FB8B5;"></div><span style="font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase; color: #F4F6F9;">AKACONS Việt Nam</span></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- ======================= DỊCH VỤ ======================= -->
+<main class="page" id="dich-vu" data-page="services" hidden>
+<section class="ph ph-services">
+<div class="wrap" style="width: 100%;">
+<p class="crumb ld ld-1"><a href="#trang-chu">Trang chủ</a> / Dịch vụ</p>
+<h1 class="ld ld-2">Dịch vụ</h1>
+<p class="ld ld-3" style="margin: 24px 0 0; max-width: 560px; font-size: 18px; line-height: 30px; color: #D5DCE6;">Chọn từ bộ sưu tập đã được kiểm chứng, hoặc phát triển một bề mặt độc bản cùng kiến trúc sư của gia chủ.</p>
+</div>
+</section>
+
+<section class="sec-bg bg-services" style="padding: 150px 0;">
+<div class="wrap">
+<div class="g-2" style="gap: 40px;">
+<article class="card rv-l" style="border: 1px solid rgba(255,255,255,0.14); display: flex; flex-direction: column;">
+<div class="zoom" style="position: relative; height: 520px;">
+<img src="assets/img/636f28faa09a4491dd37d575029ba680.jpg" alt="Phòng mẫu bộ sưu tập Heritage" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<div style="position: absolute; left: 0; top: 0; padding: 24px 28px; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: #FFFFFF; background: #0D1D37;">Bộ sưu tập có sẵn</div>
+</div>
+<div style="padding: 40px 40px 44px;">
+<h2 style="margin: 0; font-size: 48px; line-height: 52px; font-weight: 200; color: #FFFFFF;">Heritage</h2>
+<ul style="margin: 28px 0 0; padding: 0; list-style: none; font-size: 16px; line-height: 26px; color: #D5DCE6;">
+<li style="padding: 14px 0; border-top: 1px solid rgba(255,255,255,0.14);">Bộ sưu tập màu sắc và hiệu ứng có sẵn</li>
+<li style="padding: 14px 0; border-top: 1px solid rgba(255,255,255,0.14);">Xem mẫu thực tế trước khi lựa chọn</li>
+<li style="padding: 14px 0; border-top: 1px solid rgba(255,255,255,0.14); border-bottom: 1px solid rgba(255,255,255,0.14);">Chọn tông màu, hiệu ứng phù hợp với không gian</li>
+</ul>
+</div>
+</article>
+<article class="card rv-r" style="border: 1px solid rgba(255,255,255,0.14); display: flex; flex-direction: column;">
+<div class="zoom" style="position: relative; height: 520px;">
+<img src="assets/img/1f72f9e9b93905513c961bebfcaab815.jpg" alt="Cột sơn hiệu ứng thiết kế riêng" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<div style="position: absolute; left: 0; top: 0; padding: 24px 28px; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: #FFFFFF; background: #0D1D37;">Thiết kế riêng</div>
+</div>
+<div style="padding: 40px 40px 44px;">
+<h2 style="margin: 0; font-size: 48px; line-height: 52px; font-weight: 200; color: #FFFFFF;">Bespoke</h2>
+<ul style="margin: 28px 0 0; padding: 0; list-style: none; font-size: 16px; line-height: 26px; color: #D5DCE6;">
+<li style="padding: 14px 0; border-top: 1px solid rgba(255,255,255,0.14);">Màu sắc và hiệu ứng tùy chọn riêng</li>
+<li style="padding: 14px 0; border-top: 1px solid rgba(255,255,255,0.14);">Phát triển theo ý tưởng của gia chủ và kiến trúc sư</li>
+<li style="padding: 14px 0; border-top: 1px solid rgba(255,255,255,0.14); border-bottom: 1px solid rgba(255,255,255,0.14);">Mỗi bề mặt là độc bản, dành riêng cho một ngôi nhà</li>
+</ul>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="sec-bg bg-projects" style="padding: 150px 0;">
+<div class="wrap">
+<div class="g-steps" style="gap: 80px;">
+<div>
+<p class="eyebrow rv">Dòng sơn hiệu ứng</p>
+<h2 class="sec-h rv d1">Bảy dòng hiệu ứng AKACONS thi công</h2>
+<p class="lead rv d2" style="margin-top: 28px;">Mỗi dòng hiệu ứng được thi công theo quy trình nghiệm thu từng lớp, bảo đảm bề mặt hoàn thiện đúng mẫu đã duyệt.</p>
+</div>
+<div id="effects" style="border-bottom: 1px solid rgba(255,255,255,0.14);"></div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- ======================= DỰ ÁN ======================= -->
+<main class="page" id="du-an" data-page="projects" hidden>
+<section class="ph ph-projects">
+<div class="wrap" style="width: 100%;">
+<p class="crumb ld ld-1"><a href="#trang-chu">Trang chủ</a> / Dự án</p>
+<h1 class="ld ld-2">Dự án</h1>
+<p class="ld ld-3" style="margin: 24px 0 0; max-width: 560px; font-size: 18px; line-height: 30px; color: #D5DCE6;">Hơn 1000 căn hộ, dự án, công trình tại hơn 20 tỉnh thành, cùng những chủ đầu tư hàng đầu Việt Nam.</p>
+</div>
+</section>
+
+<section class="sec-bg bg-projects" style="padding: 140px 0 160px;">
+<div class="wrap">
+<div class="g-2" id="project-cards" style="gap: 40px 32px;"></div>
+</div>
+</section>
+</main>
+
+<!-- ======================= QUY TRÌNH ======================= -->
+<main class="page" id="quy-trinh" data-page="process" hidden>
+<section class="ph ph-process">
+<div class="wrap" style="width: 100%;">
+<p class="crumb ld ld-1"><a href="#trang-chu">Trang chủ</a> / Quy trình</p>
+<h1 class="ld ld-2">Quy trình</h1>
+<p class="ld ld-3" style="margin: 24px 0 0; max-width: 600px; font-size: 18px; line-height: 30px; color: #D5DCE6;">Một bề mặt đẹp và bền không chỉ đến từ tay nghề, mà còn từ cách công trình được tổ chức.</p>
+</div>
+</section>
+
+<section class="sec-bg bg-process" style="padding: 150px 0;">
+<div class="wrap">
+<div class="g-steps">
+<div>
+<p class="eyebrow rv">Sáu nguyên tắc</p>
+<h2 class="sec-h rv d1">Tổ chức và quản lý thi công chuyên nghiệp</h2>
+<p class="lead rv d2" style="margin: 28px 0 48px;">AKACONS áp dụng phương pháp quản lý xây dựng vào từng công trình. Nhờ vậy, gia chủ luôn nắm rõ công trình của mình và an tâm từ ngày khởi công đến nhiều năm sau.</p>
+<div class="rv d3" id="step-btns" style="border-bottom: 1px solid rgba(255,255,255,0.14);"></div>
+</div>
+<div class="rv-clip" style="position: relative; min-height: 640px; overflow: hidden; background: #071225;">
+<div id="step-imgs"></div>
+<div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,18,37,0.1) 0%, rgba(7,18,37,0.25) 40%, rgba(7,18,37,0.94) 82%);"></div>
+<div class="stack" id="step-texts" style="position: absolute; inset: 0;"></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec-bg bg-letter" style="padding: 150px 0;">
+<div class="wrap">
+<div style="max-width: 760px; margin-bottom: 64px;">
+<p class="eyebrow rv">Bảo hành và bảo trì</p>
+<h2 class="sec-h rv d1">An tâm cả sau ngày bàn giao</h2>
+<p class="lead rv d2" style="margin-top: 28px;">Bảo hành minh bạch bằng văn bản với chính sách rõ ràng, cùng các mốc bảo trì chủ động sau bàn giao.</p>
+</div>
+<div class="g-4" style="column-gap: 32px;">
+<div class="rv" style="border-top: 1px solid rgba(63,184,181,0.6); padding-top: 28px;"><div class="stat-n" style="font-size: 72px; line-height: 80px; font-weight: 200; color: #FFFFFF;">24<span style="font-size: 22px; margin-left: 6px; color: #D5DCE6;">giờ</span></div><div style="margin-top: 12px; font-size: 16px; line-height: 26px; color: #D5DCE6;">Phản hồi yêu cầu bảo hành</div></div>
+<div class="rv d1" style="border-top: 1px solid rgba(255,255,255,0.18); padding-top: 28px;"><div class="stat-n" style="font-size: 72px; line-height: 80px; font-weight: 200; color: #FFFFFF;">30<span style="font-size: 22px; margin-left: 6px; color: #D5DCE6;">ngày</span></div><div style="margin-top: 12px; font-size: 16px; line-height: 26px; color: #D5DCE6;">Mốc bảo trì chủ động đầu tiên</div></div>
+<div class="rv d2" style="border-top: 1px solid rgba(255,255,255,0.18); padding-top: 28px;"><div class="stat-n" style="font-size: 72px; line-height: 80px; font-weight: 200; color: #FFFFFF;">90<span style="font-size: 22px; margin-left: 6px; color: #D5DCE6;">ngày</span></div><div style="margin-top: 12px; font-size: 16px; line-height: 26px; color: #D5DCE6;">Mốc bảo trì chủ động thứ hai</div></div>
+<div class="rv d3" style="border-top: 1px solid rgba(255,255,255,0.18); padding-top: 28px;"><div class="stat-n" style="font-size: 72px; line-height: 80px; font-weight: 200; color: #FFFFFF;">180<span style="font-size: 22px; margin-left: 6px; color: #D5DCE6;">ngày</span></div><div style="margin-top: 12px; font-size: 16px; line-height: 26px; color: #D5DCE6;">Mốc bảo trì chủ động thứ ba</div></div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- ======================= LIÊN HỆ ======================= -->
+<main class="page" id="lien-he" data-page="contact" hidden>
+<section class="ph ph-contact">
+<div class="wrap" style="width: 100%;">
+<p class="crumb ld ld-1"><a href="#trang-chu">Trang chủ</a> / Liên hệ</p>
+<h1 class="ld ld-2">Liên hệ</h1>
+<p class="ld ld-3" style="margin: 24px 0 0; max-width: 560px; font-size: 18px; line-height: 30px; color: #D5DCE6;">Để lại thông tin, cán bộ kỹ thuật của AKACONS sẽ liên hệ để khảo sát và tư vấn giải pháp bề mặt phù hợp cho công trình.</p>
+</div>
+</section>
+
+<section class="sec-bg bg-about" style="padding: 140px 0 140px;">
+<div class="wrap">
+<div class="g-contact">
+<div>
+<p class="eyebrow rv">Thông tin liên hệ</p>
+<h2 class="sec-h rv d1">Bắt đầu cùng AKACONS</h2>
+<div style="margin-top: 48px;">
+<div class="rv-line" style="height: 1px; background: rgba(255,255,255,0.14);"></div>
+<div class="rv lnk-row" style="padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.14);"><div style="font-size: 13px; color: #B7C2D4; letter-spacing: 0.1em; text-transform: uppercase;">Hotline</div><a href="tel:0568717712" style="display: inline-block; margin-top: 6px; font-size: 24px; font-weight: 300; color: #FFFFFF; text-decoration: none;">0568.717.712</a></div>
+<div class="rv d1 lnk-row" style="padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.14);"><div style="font-size: 13px; color: #B7C2D4; letter-spacing: 0.1em; text-transform: uppercase;">Email</div><a href="mailto:lienhe@akacons.vn" style="display: inline-block; margin-top: 6px; font-size: 18px; color: #F4F6F9; text-decoration: none;">lienhe@akacons.vn</a></div>
+<div class="rv d2 lnk-row" style="padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.14);"><div style="font-size: 13px; color: #B7C2D4; letter-spacing: 0.1em; text-transform: uppercase;">Địa chỉ</div><div style="margin-top: 6px; font-size: 16px; line-height: 26px; color: #F4F6F9;">18BT1-X2, Khu đô thị Bắc Linh Đàm, Phường Định Công, Thành phố Hà Nội</div></div>
+<div class="rv d3" style="padding: 24px 0 0;"><div style="font-size: 13px; color: #B7C2D4; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px;">Theo dõi AKACONS</div>
+<div class="soc-row" data-social></div></div>
+</div>
+</div>
+<form class="rv-r" style="background: rgba(13,29,55,0.85); border: 1px solid rgba(255,255,255,0.14); padding: 56px; display: flex; flex-direction: column; gap: 32px; align-self: start;">
+<h3 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 300; color: #FFFFFF;">Đăng ký khảo sát và tư vấn</h3>
+<div class="g-2" style="gap: 32px;">
+<div class="field"><label for="f-name">Họ và tên</label><input id="f-name" type="text" placeholder="Nguyễn Văn A"></div>
+<div class="field"><label for="f-phone">Số điện thoại</label><input id="f-phone" type="tel" placeholder="09xx xxx xxx"></div>
+</div>
+<div class="g-2" style="gap: 32px;">
+<div class="field"><label for="f-type">Loại công trình</label><select id="f-type"><option>Biệt thự</option><option>Nhà phố</option><option>Căn hộ</option><option>Khách sạn, thương mại</option></select></div>
+<div class="field"><label for="f-area">Diện tích dự kiến (m²)</label><input id="f-area" type="text" placeholder="Ví dụ: 300"></div>
+</div>
+<div class="field"><label for="f-note">Mong muốn của gia chủ</label><textarea id="f-note" rows="3" placeholder="Hiệu ứng quan tâm, vị trí công trình, thời gian dự kiến..."></textarea></div>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;">
+<span style="font-size: 14px; color: #B7C2D4;">Phản hồi trong vòng 24 giờ làm việc</span>
+<button type="button" class="btn-solid">Gửi yêu cầu<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<!-- ======================= KIẾN THỨC ======================= -->
+<main class="page" id="kien-thuc" data-page="knowledge" hidden>
+<section class="ph ph-knowledge">
+<div class="wrap" style="width: 100%;">
+<p class="crumb ld ld-1"><a href="#trang-chu">Trang chủ</a> / Kiến thức</p>
+<h1 class="ld ld-2">Kiến thức</h1>
+<p class="ld ld-3" style="margin: 24px 0 0; max-width: 580px; font-size: 18px; line-height: 30px; color: #D5DCE6;">Hiểu đúng về sơn hiệu ứng để lựa chọn đúng giải pháp cho ngôi nhà của bạn.</p>
+</div>
+</section>
+<section class="sec-bg bg-services" style="padding: 120px 0 150px;">
+<div class="wrap">
+<div id="kcats" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 48px;" role="group" aria-label="Lọc theo chủ đề"></div>
+<div class="g-3" id="articles" style="gap: 32px;"></div>
+</div>
+</section>
+</main>
+
+<!-- ======================= DỮ LIỆU ======================= -->
+<main class="page" id="du-lieu" data-page="data" hidden>
+<section class="ph ph-data">
+<div class="wrap" style="width: 100%;">
+<p class="crumb ld ld-1"><a href="#trang-chu">Trang chủ</a> / Dữ liệu</p>
+<h1 class="ld ld-2">Dữ liệu</h1>
+<p class="ld ld-3" style="margin: 24px 0 0; max-width: 580px; font-size: 18px; line-height: 30px; color: #D5DCE6;">Hồ sơ, tài liệu và bộ sưu tập dành cho gia chủ, kiến trúc sư và đối tác.</p>
+</div>
+</section>
+<section class="sec-bg bg-projects" style="padding: 100px 0 150px;">
+<div class="wrap">
+<div class="tabbar" role="tablist" aria-label="Loại tài liệu">
+<button type="button" role="tab" class="tab on" id="tab-pub" aria-selected="true" data-dtab="pub">Dành cho gia chủ</button>
+<button type="button" role="tab" class="tab" id="tab-int" aria-selected="false" data-dtab="int"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Nội bộ AKACONS</button>
+</div>
+
+<div id="dt-pub" class="g-steps" style="gap: 80px; animation: pgIn .5s ease both;">
+<div>
+<p class="eyebrow">Tài liệu tải về</p>
+<h2 class="sec-h">Thư viện tài liệu cho gia chủ</h2>
+<p class="lead" style="margin-top: 28px;">Hồ sơ, quy trình và chính sách AKACONS áp dụng cho mỗi công trình. Cần bản in hoặc tài liệu riêng cho dự án, vui lòng liên hệ AKACONS.</p>
+</div>
+<div id="docs" style="border-bottom: 1px solid rgba(255,255,255,0.14);"></div>
+</div>
+
+<div id="dt-int" hidden>
+<div class="lock-box" id="dt-locked" style="animation: pgIn .5s ease both;">
+<span class="doc-ico" aria-hidden="true" style="width: 64px; height: 64px;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5" y="11" width="14" height="10" rx="1"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+<h2 style="margin: 24px 0 0; font-size: 34px; line-height: 42px; font-weight: 200; color: #FFFFFF;">Khu vực dành cho nhân viên</h2>
+<p class="lead" style="margin-top: 12px; max-width: 460px; text-align: center;">Hệ thống quy chế, quy trình và biểu mẫu nội bộ của các phòng ban. Vui lòng đăng nhập bằng tài khoản công ty.</p>
+<form style="width: 100%; max-width: 420px; display: flex; flex-direction: column; gap: 24px; margin-top: 32px;">
+<div class="field"><label for="st-mail">Email công ty</label><input id="st-mail" type="email" placeholder="ten@akacons.vn"></div>
+<div class="field"><label for="st-pass">Mật khẩu</label><input id="st-pass" type="password"></div>
+<button type="button" class="btn-solid" data-action="login" style="justify-content: center;">Đăng nhập</button>
+</form>
+</div>
+<div id="dt-open" style="animation: pgIn .5s ease both;" hidden>
+<div style="display: flex; justify-content: space-between; align-items: end; gap: 32px; flex-wrap: wrap; margin-bottom: 36px;">
+<div>
+<p class="eyebrow">Hệ thống các biểu mẫu</p>
+<h2 class="sec-h">Quy chế, quy trình và biểu mẫu</h2>
+</div>
+<div class="field" style="width: 340px; max-width: 100%;"><label for="d-search">Tìm tài liệu</label><input id="d-search" type="search" placeholder="Ví dụ: nghiệm thu, bảo hành..."></div>
+</div>
+<div id="depts" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px;" role="group" aria-label="Chọn phòng ban"></div>
+<div class="g-2" id="dgroups" style="gap: 48px; align-items: start;"></div>
+<p class="lead" id="dempty" style="margin-top: 24px;" hidden>Không tìm thấy tài liệu phù hợp.</p>
+<div style="margin-top: 48px; display: flex; justify-content: flex-end;"><button type="button" class="btn-line" data-action="logout" style="font-size: 13px; padding: 10px 18px; min-height: 44px;">Đăng xuất</button></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- ======================= TUYỂN DỤNG ======================= -->
+<main class="page" id="tuyen-dung" data-page="careers" hidden>
+<section class="ph ph-careers">
+<div class="wrap" style="width: 100%;">
+<p class="crumb ld ld-1"><a href="#trang-chu">Trang chủ</a> / Tuyển dụng</p>
+<h1 class="ld ld-2">Tuyển dụng</h1>
+<p class="ld ld-3" style="margin: 24px 0 0; max-width: 580px; font-size: 18px; line-height: 30px; color: #D5DCE6;">Cùng AKACONS định hình chuẩn mực mới cho ngành thi công sơn hiệu ứng tại Việt Nam.</p>
+</div>
+</section>
+<section class="sec-bg bg-about" style="padding: 140px 0;">
+<div class="wrap">
+<div class="g-2" style="gap: 80px; align-items: center;">
+<div>
+<p class="eyebrow rv">Làm việc tại AKACONS</p>
+<h2 class="sec-h rv d1">Một đội ngũ, một chuẩn mực</h2>
+<div style="margin-top: 40px;">
+<div class="rv lnk-row" style="padding: 22px 0; border-top: 1px solid rgba(255,255,255,0.14);"><div style="font-size: 13px; color: #3FB8B5; letter-spacing: 0.1em;">01</div><div style="margin-top: 8px; font-size: 20px; color: #FFFFFF;">Quy trình chuẩn hóa</div><div style="margin-top: 6px; font-size: 15px; line-height: 24px; color: #B7C2D4;">Làm việc theo hệ thống quy trình, quy chuẩn và biểu mẫu thống nhất từ văn phòng đến công trường.</div></div>
+<div class="rv d1 lnk-row" style="padding: 22px 0; border-top: 1px solid rgba(255,255,255,0.14);"><div style="font-size: 13px; color: #3FB8B5; letter-spacing: 0.1em;">02</div><div style="margin-top: 8px; font-size: 20px; color: #FFFFFF;">Đào tạo tay nghề</div><div style="margin-top: 6px; font-size: 15px; line-height: 24px; color: #B7C2D4;">Nâng cao tay nghề đội ngũ là một trong những cam kết cốt lõi của AKACONS.</div></div>
+<div class="rv d2 lnk-row" style="padding: 22px 0; border-top: 1px solid rgba(255,255,255,0.14); border-bottom: 1px solid rgba(255,255,255,0.14);"><div style="font-size: 13px; color: #3FB8B5; letter-spacing: 0.1em;">03</div><div style="margin-top: 8px; font-size: 20px; color: #FFFFFF;">Công trình quy mô</div><div style="margin-top: 6px; font-size: 15px; line-height: 24px; color: #B7C2D4;">Tham gia những công trình từ biệt thự riêng đến các đại dự án trên hơn 20 tỉnh thành.</div></div>
+</div>
+</div>
+<div class="rv-clip zoom"><img src="assets/img/cab02fa39fea23a29a720236e2b99326.jpg" alt="Đội ngũ nhân sự AKACONS" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;"></div>
+</div>
+</div>
+</section>
+<section class="sec-bg bg-services" style="padding: 140px 0;">
+<div class="wrap">
+<div class="g-contact">
+<div>
+<p class="eyebrow rv">Nhóm vị trí</p>
+<h2 class="sec-h rv d1">Bạn phù hợp với vị trí nào?</h2>
+<p class="lead rv d2" style="margin-top: 24px;">Thông tin tuyển dụng cụ thể được cập nhật theo từng đợt. Bạn có thể gửi hồ sơ trước để AKACONS liên hệ khi có vị trí phù hợp.</p>
+<div id="roles" style="margin-top: 40px; border-bottom: 1px solid rgba(255,255,255,0.14);"></div>
+</div>
+<form class="rv-r" style="background: rgba(13,29,55,0.85); border: 1px solid rgba(255,255,255,0.14); padding: 56px; display: flex; flex-direction: column; gap: 32px; align-self: start;">
+<h3 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 300; color: #FFFFFF;">Gửi hồ sơ ứng tuyển</h3>
+<div class="g-2" style="gap: 32px;">
+<div class="field"><label for="c-name">Họ và tên</label><input id="c-name" type="text"></div>
+<div class="field"><label for="c-phone">Số điện thoại</label><input id="c-phone" type="tel"></div>
+</div>
+<div class="field"><label for="c-role">Vị trí quan tâm</label><select id="c-role"><option>Cán bộ kỹ thuật hiện trường</option><option>Thợ thi công sơn hiệu ứng</option><option>Nhân viên kinh doanh</option><option>Nhân viên văn phòng</option></select></div>
+<div class="field"><label for="c-cv">Hồ sơ (CV)</label><input id="c-cv" type="file" accept=".pdf,.doc,.docx" style="font-size: 15px;"></div>
+<div style="display: flex; justify-content: flex-end;"><button type="button" class="btn-solid">Gửi hồ sơ<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<!-- ======================= SURFACE STUDIO ======================= -->
+<main class="page" id="surface-studio" data-page="studio" hidden>
+<section class="ph ph-studio" style="min-height: 56vh;">
+<div class="wrap" style="width: 100%;">
+<p class="crumb ld ld-1"><a href="#trang-chu">Trang chủ</a> / Surface Studio</p>
+<h1 class="ld ld-2">Surface Studio</h1>
+<p class="ld ld-3" style="margin: 24px 0 0; max-width: 600px; font-size: 18px; line-height: 30px; color: #D5DCE6;">Phối thử sơn hiệu ứng lên ảnh hiện trạng công trình của bạn bằng AI, trước khi quyết định.</p>
+</div>
+</section>
+<section class="sec-bg bg-services" style="padding: 100px 0 140px;">
+<div class="wrap">
+<div class="g-3" style="gap: 24px; margin-bottom: 48px;">
+<div class="rv" style="border-top: 1px solid #3FB8B5; padding-top: 18px;"><div style="font-size: 13px; color: #3FB8B5; letter-spacing: 0.1em;">BƯỚC 01</div><div style="margin-top: 6px; font-size: 18px; color: #F4F6F9;">Tải ảnh hiện trạng công trình</div></div>
+<div class="rv d1" style="border-top: 1px solid #3FB8B5; padding-top: 18px;"><div style="font-size: 13px; color: #3FB8B5; letter-spacing: 0.1em;">BƯỚC 02</div><div style="margin-top: 6px; font-size: 18px; color: #F4F6F9;">Chọn hiệu ứng và tông màu</div></div>
+<div class="rv d2" id="sd-step3" style="border-top: 1px solid #3FB8B5; padding-top: 18px;"><div style="font-size: 13px; color: #3FB8B5; letter-spacing: 0.1em;">BƯỚC 03</div><div style="margin-top: 6px; font-size: 18px; color: #F4F6F9;">So sánh trước, sau và gửi tư vấn</div></div>
+</div>
+<div class="g-studio">
+<div class="sd-panel">
+<label class="sd-drop" for="sd-file">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3FB8B5" stroke-width="1.4" aria-hidden="true"><path d="M12 16V4M6 9l6-6 6 6M4 20h16"/></svg>
+<span style="font-size: 16px; color: #FFFFFF;">Tải ảnh công trình lên</span>
+<span id="sd-note" style="font-size: 13px; color: #B7C2D4;">JPG hoặc PNG. Đang hiển thị ảnh mẫu.</span>
+</label>
+<input id="sd-file" type="file" accept="image/*" class="sr-only">
+<p style="margin: 32px 0 14px; font-size: 13px; color: #B7C2D4; letter-spacing: 0.1em; text-transform: uppercase;">Hiệu ứng</p>
+<div class="sd-fx" id="sd-fx"></div>
+<p style="margin: 28px 0 14px; font-size: 13px; color: #B7C2D4; letter-spacing: 0.1em; text-transform: uppercase;">Tông màu: <span id="sd-color-name" style="color: #FFFFFF; text-transform: none; letter-spacing: 0;"></span></p>
+<div id="sd-colors" style="display: flex; gap: 10px; flex-wrap: wrap;"></div>
+<button type="button" class="btn-solid" data-action="sd-run" style="width: 100%; justify-content: center; margin-top: 36px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/></svg>Phối mẫu bằng AI</button>
+</div>
+<div>
+<div class="sd-stage">
+<img class="sd-base" data-sd-img src="assets/img/2132f6cb6df720eb6f22d7e7e467d63a.jpg" alt="Ảnh hiện trạng công trình">
+<div id="sd-result">
+<div class="sd-after" id="sd-after">
+<img class="sd-base" data-sd-img src="assets/img/2132f6cb6df720eb6f22d7e7e467d63a.jpg" alt="">
+<div class="sd-tint" id="sd-tint"></div>
+<div class="sd-tex" id="sd-tex"></div>
+</div>
+<div class="sd-handle" id="sd-handle"></div>
+<span class="sd-tag" style="left: 16px;">Hiện trạng</span>
+<span class="sd-tag" style="right: 16px;" data-sd-fx-name></span>
+</div>
+<div class="sd-scan" id="sd-scan" hidden><span style="font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: #FFFFFF;">AI đang phối mẫu</span><span style="font-size: 14px; color: #D5DCE6;"><span data-sd-fx-name></span> · <span data-sd-color-name></span></span></div>
+</div>
+<div id="sd-compare">
+<label for="sd-split" class="sr-only">Kéo để so sánh trước và sau</label>
+<input id="sd-split" class="sd-range" type="range" min="0" max="100" value="50">
+<div style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; margin-top: 18px;">
+<span style="font-size: 14px; color: #B7C2D4;">Kéo thanh trượt để so sánh trước và sau</span>
+<a href="#lien-he" class="btn-line" style="padding: 10px 18px; min-height: 44px; font-size: 13px;">Gửi phối cảnh để được tư vấn<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+</div>
+<p style="margin: 24px 0 0; font-size: 13px; line-height: 22px; color: #B7C2D4;">Ảnh phối cảnh mang tính tham khảo. Màu sắc và vân bề mặt thực tế được xác nhận trên mẫu thật tại công trình trước khi thi công.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- KÊU GỌI LIÊN HỆ (mọi trang trừ Liên hệ) -->
+<section class="cta-bg" id="cta" style="padding: 130px 0;">
+<div class="wrap" style="display: flex; justify-content: space-between; align-items: center; gap: 40px; flex-wrap: wrap;">
+<div style="max-width: 640px;">
+<p class="eyebrow rv">Liên hệ</p>
+<h2 class="sec-h rv d1">Bắt đầu cùng AKACONS</h2>
+<p class="lead rv d2" style="margin-top: 20px; color: #D5DCE6;">Cán bộ kỹ thuật của AKACONS sẽ khảo sát và tư vấn giải pháp bề mặt phù hợp cho công trình của gia chủ.</p>
+</div>
+<div class="rv d2" style="display: flex; gap: 12px; flex-wrap: wrap;">
+<a href="#lien-he" class="btn-solid">Đăng ký tư vấn<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<a href="tel:0568717712" class="btn-line">0568.717.712</a>
+</div>
+</div>
+</section>
+
+<!-- CHÂN TRANG -->
+<footer class="sec-bg bg-footer site-footer">
+<div class="wrap">
+<div class="footer-main">
+<section class="footer-brand" aria-label="Thông tin AKACONS">
+<img src="assets/img/logo.png" alt="AKACONS" class="footer-logo">
+<p>Công ty Cổ phần Xây dựng và Thương mại AKACONS Việt Nam. Kiến tạo giá trị bền vững cho mọi công trình.</p>
+<p class="footer-tax">Mã số thuế: 0111439956</p>
+<div class="soc-row footer-social" data-social aria-label="Mạng xã hội AKACONS"></div>
+<a class="footer-directions" href="https://www.google.com/maps/search/?api=1&amp;query=18BT1-X2%2C%20KDT%20Bac%20Linh%20Dam%2C%20Dinh%20Cong%2C%20Ha%20Noi" target="_blank" rel="noopener">⌖ <span>Xem chỉ đường</span> <b aria-hidden="true">›</b></a>
+</section>
+<nav class="footer-nav" aria-label="Khám phá"><h2>Khám phá</h2><div id="nav-footer"></div></nav>
+<section class="footer-services"><h2>Dịch vụ</h2><a href="#dich-vu">Heritage <span aria-hidden="true">→</span></a><a href="#dich-vu">Bespoke <span aria-hidden="true">→</span></a></section>
+<address class="footer-contact"><h2>Liên hệ</h2><div><span class="footer-icon" aria-hidden="true">☎</span><p>Hotline<a href="tel:0568717712">0568.717.712</a></p><a class="contact-action" href="tel:0568717712">Gọi ngay</a></div><div><span class="footer-icon" aria-hidden="true">✉</span><p>Email<a href="mailto:lienhe@akacons.vn">lienhe@akacons.vn</a></p><a class="contact-action" href="mailto:lienhe@akacons.vn">Gửi email</a></div><div><span class="footer-icon" aria-hidden="true">⌖</span><p>Địa chỉ<strong>18BT1-X2, KĐT Bắc Linh Đàm,<br>P. Định Công, Hà Nội</strong></p></div></address>
+</div>
+<div class="footer-bottom"><span>© <span id="footer-year"></span> AKACONS. All rights reserved.</span><div class="footer-legal" aria-label="Thông tin pháp lý"><span>Chính sách bảo mật</span><span>Điều khoản sử dụng</span><span>Chính sách chất lượng</span></div><button type="button" class="footer-top" data-action="back-to-top">↑ Lên đầu trang</button></div>
+</div>
+</footer>
+
+</div>
+<nav class="mobile-bottom-nav" aria-label="Điều hướng nhanh trên điện thoại">
+<a href="#trang-chu" class="mbn-link" data-nav="home" aria-label="Trang chủ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Trang chủ</span></a>
+<a href="#dich-vu" class="mbn-link" data-nav="services" aria-label="Dịch vụ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 7l8 4 8-4-8-4Z"/><path d="m4 12 8 4 8-4M4 17l8 4 8-4"/></svg><span>Dịch vụ</span></a>
+<a href="tel:0568717712" class="mbn-call" aria-label="Gọi hotline 0568.717.712"><span class="mbn-call-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 3.5 5 5.8c-1 1-.5 4.3 2.7 7.5 3.2 3.2 6.5 3.7 7.5 2.7l2.3-2.5-3.2-2.1-1.6 1.4a11 11 0 0 1-2-1.6 11 11 0 0 1-1.6-2l1.4-1.6L7.5 3.5Z"/></svg></span><span>Gọi ngay</span></a>
+<a href="#du-an" class="mbn-link" data-nav="projects" aria-label="Dự án"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5l8-3 8 3v16M8 21v-5h8v5M8 8h.01M12 8h.01M16 8h.01M8 12h.01M12 12h.01M16 12h.01"/></svg><span>Dự án</span></a>
+<a href="#kien-thuc" class="mbn-link" data-nav="knowledge" aria-label="Kiến thức"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5v-16Z"/><path d="M4 19h16M8 7h8M8 11h8"/></svg><span>Kiến thức</span></a>
+</nav>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/builder.js"></script>
+</body>
+</html>

@@ -135,5 +135,32 @@ function DashboardPage() {
 }
 
 export default function HomePage() {
-  return <BrandHome />;
+  const [hash, setHash] = useState('');
+  const legacySectionHash = hash === '#about' || hash === '#library' || hash === '#contact';
+
+  useEffect(() => {
+    const syncHash = () => setHash(window.location.hash.toLowerCase());
+    syncHash();
+    window.addEventListener('hashchange', syncHash);
+    return () => window.removeEventListener('hashchange', syncHash);
+  }, []);
+
+  useEffect(() => {
+    if (!legacySectionHash) return;
+    requestAnimationFrame(() => document.getElementById(hash.slice(1))?.scrollIntoView());
+  }, [hash, legacySectionHash]);
+
+  // These anchors are part of the existing React public site.  Do not send
+  // them into the imported visual source, which has its own internal routing.
+  if (legacySectionHash) {
+    return <BrandHome />;
+  }
+
+  return (
+    <iframe
+      title="AKACONS"
+      src="/akacons-website-source/index.html"
+      className="akacons-source-frame"
+    />
+  );
 }

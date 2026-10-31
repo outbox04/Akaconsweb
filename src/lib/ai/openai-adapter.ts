@@ -1,9 +1,11 @@
 import OpenAI from 'openai';
 import { toFile } from 'openai/uploads';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || 'sk-placeholder-key',
-});
+function getOpenAI() {
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) throw new Error('AI provider is not configured.');
+  return new OpenAI({ apiKey });
+}
 
 export interface RenderRequestParams {
   originalImageUrl: string;
@@ -27,7 +29,7 @@ export async function generateAIRender(params: RenderRequestParams): Promise<Ren
 
     // Calling OpenAI DALL-E 3 / Edit API
     // If running with real OpenAI API Key:
-    const response = await openai.images.generate({
+    const response = await getOpenAI().images.generate({
       model: 'dall-e-3',
       prompt: prompt,
       n: 1,
@@ -64,7 +66,7 @@ export async function generateMaskedAIRender(params: {
 }): Promise<RenderResponse> {
   try {
     const prompt = `Edit only the transparent masked area of this architectural photo. Apply a realistic ${params.effectName} wall finish using the exact reference color ${params.colorName}. Preserve the room geometry, lighting direction and material scale. Do not alter doors, windows, furniture, floor, ceiling, decor, people or any unmasked area.${params.promptAddon ? ` Additional direction: ${params.promptAddon}` : ''}`;
-    const response = await openai.images.edit({
+    const response = await getOpenAI().images.edit({
       model: 'gpt-image-1',
       image: await toFile(params.originalBuffer, 'current-space.png', { type: 'image/png' }),
       mask: await toFile(params.apiMaskBuffer, 'selection-mask.png', { type: 'image/png' }),

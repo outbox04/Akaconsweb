@@ -18,6 +18,8 @@ const NAV_ITEMS = [
   { key: 'pricing', href: '/pricing', label: 'Dự toán & Bảng giá', icon: '฿', group: 'Kinh doanh' },
   { key: 'quotes', href: '/quotes', label: 'Báo giá', icon: '▤', group: 'Kinh doanh' },
   { key: 'materials', href: '/admin/materials', label: 'CRM vật liệu', icon: '◩', group: 'Hệ thống' },
+  { key: 'cms', href: '/admin/cms', label: 'Website CMS', icon: '◈', group: 'Hệ thống' },
+  { key: 'live_preview', href: '/admin/live-preview', label: 'Live preview website', icon: '◈', group: 'Hệ thống' },
   { key: 'admin', href: '/admin', label: 'Quản trị hệ thống', icon: '⚙', group: 'Hệ thống' },
 ];
 

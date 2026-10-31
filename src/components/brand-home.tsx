@@ -73,7 +73,7 @@ export default function BrandHome() {
         </button>
       </header>
 
-      <section className="hero" id="about">
+      <section className="hero">
         <div className="hero-surfaces" aria-hidden="true">
           {finishes.map((item, index) => <div key={item.name} className={finish === index ? "active" : ""} style={{ backgroundImage: `url(${item.image})` }} />)}
         </div>
@@ -92,6 +92,28 @@ export default function BrandHome() {
               <Image src={item.image} alt="" fill sizes="60px" />
             </button>
           ))}
+        </div>
+      </section>
+
+      <section className="reference-intro" id="about">
+        <div className="reference-wrap reference-intro-grid">
+          <p className="reference-eyebrow">Về AKACONS</p>
+          <div>
+            <h2>Kiến tạo giá trị<br />trên từng bề mặt</h2>
+            <p>Hơn 10 năm tích luỹ kinh nghiệm thi công xây dựng cùng các đối tác lớn, AKACONS mang chuẩn mực của những dự án chuyên nghiệp đến từng không gian sống.</p>
+            <Link href="/gioi-thieu" className="reference-link">Tìm hiểu về chúng tôi <ArrowRight size={18} /></Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="reference-stats">
+        <div className="reference-wrap">
+          <p className="reference-eyebrow centered">AKACONS qua những con số</p>
+          <div className="reference-stat-grid">
+            <article><strong>1000<span>+</span></strong><i /><p>căn hộ, dự án, công trình đã thực hiện</p></article>
+            <article><strong>1.5<span> triệu+</span></strong><i /><p>m² sơn hiệu ứng hoàn thiện</p></article>
+            <article><strong>20<span>+</span></strong><i /><p>tỉnh thành trên toàn quốc</p></article>
+          </div>
         </div>
       </section>
 
@@ -141,8 +163,35 @@ export default function BrandHome() {
         </div>
       </section>
 
+      <section className="reference-services">
+        <div className="reference-wrap">
+          <div className="reference-section-head"><div><p className="reference-eyebrow">Dịch vụ</p><h2>Hai cách để chọn<br />bề mặt cho ngôi nhà</h2></div><Link href="/bo-suu-tap" className="reference-link">Xem bộ sưu tập <ArrowRight size={18} /></Link></div>
+          <div className="reference-service-grid">
+            <Link href="/bo-suu-tap" className="reference-service-card"><span><Image src="/reference/636f28faa09a4491dd37d575029ba680.jpg" alt="Bộ sưu tập Heritage" fill sizes="(max-width: 800px) 100vw, 50vw" /></span><div><h3>Heritage</h3><p>Bộ sưu tập màu sắc và hiệu ứng có sẵn</p></div></Link>
+            <Link href="/lien-he" className="reference-service-card"><span><Image src="/reference/1f72f9e9b93905513c961bebfcaab815.jpg" alt="Bề mặt Bespoke" fill sizes="(max-width: 800px) 100vw, 50vw" /></span><div><h3>Bespoke</h3><p>Màu sắc và hiệu ứng thiết kế riêng</p></div></Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="reference-projects">
+        <div className="reference-wrap"><div className="reference-section-head"><div><p className="reference-eyebrow">Dự án tiêu biểu</p><h2>Công trình đã hoàn thiện</h2></div><Link href="/projects" className="reference-outline">Tất cả dự án <ArrowRight size={18} /></Link></div></div>
+        <div className="reference-project-track">
+          {[
+            ['/reference/8c1bfb9963794c47ef1091b83bbecb9e.jpg', 'Không gian thương mại', 'Dấu ấn bề mặt'],
+            ['/reference/e3c9d59a77e099e7aeb935adea16d376.jpg', 'Biệt thự', 'Tinh tế trong từng lớp sơn'],
+            ['/reference/1584ed0b3740ea657e81023a7663ad99.jpg', 'Nhà ở', 'Bề mặt mang cá tính riêng'],
+          ].map(([image, type, title]) => <article key={image} className="reference-project-card"><Image src={image} alt={title} fill sizes="(max-width:800px) 86vw, 440px" /><div><small>{type}</small><h3>{title}</h3><p>Sơn hiệu ứng AKACONS</p></div></article>)}
+        </div>
+      </section>
+
+      <section className="reference-process">
+        <div className="reference-wrap"><div className="reference-section-head"><div><p className="reference-eyebrow">Quy trình</p><h2>Tổ chức và quản lý thi công chuyên nghiệp</h2></div><Link href="/lien-he" className="reference-link">Nhận tư vấn <ArrowRight size={18} /></Link></div>
+          <div className="reference-process-grid">{['Khảo sát & tư vấn bề mặt', 'Lên phối cảnh & duyệt mẫu', 'Thi công theo tiêu chuẩn', 'Nghiệm thu & bảo hành'].map((step, index) => <article key={step}><span>0{index + 1}</span><h3>{step}</h3></article>)}</div>
+        </div>
+      </section>
+
       <section className="service">
-        <Image src="/home/craft-service.png" alt="Nghệ nhân AKACONS thi công sơn hiệu ứng" fill sizes="100vw" />
+        <Image src="/reference/bf628f494ca4f0093e77fc70edf72a57.jpg" alt="Nghệ nhân AKACONS thi công sơn hiệu ứng" fill sizes="100vw" />
         <div>
           <p className="kicker">Chuẩn mực hoàn thiện khác biệt</p>
           <h2>Dịch vụ thi công<br />tiêu chuẩn <em>5★</em></h2>

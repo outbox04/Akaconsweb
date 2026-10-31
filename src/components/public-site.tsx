@@ -36,7 +36,7 @@ export function PublicSite({ children }: { children: React.ReactNode }) {
   return <div className="public-site">
     <header className="public-header">
       <Link className="public-logo" href="/">
-        <Image src="/brand/akacons-logo.png" alt="AKACONS" width={1680} height={645} priority />
+        <Image src="/reference/logo.png" alt="AKACONS" width={1680} height={645} priority />
       </Link>
       <nav className={open ? 'is-open' : ''}>
         {navigation.map(([href, label]) =>
@@ -50,7 +50,7 @@ export function PublicSite({ children }: { children: React.ReactNode }) {
     </header>
     <main>{children}</main>
     <footer className="public-footer">
-      <div><Image src="/brand/akacons-logo.png" alt="AKACONS" width={1680} height={645} /><p>Kiến tạo bề mặt. Khơi mở cảm xúc.<br />Sơn hiệu ứng thủ công cho không gian Việt.</p></div>
+      <div><Image src="/reference/logo.png" alt="AKACONS" width={1680} height={645} /><p>Kiến tạo bề mặt. Khơi mở cảm xúc.<br />Sơn hiệu ứng thủ công cho không gian Việt.</p></div>
       <nav>{navigation.map(([href, label]) => <Link href={href} key={href}>{label}</Link>)}</nav>
       <div className="public-footer-contact"><a href="mailto:hello@akacons.vn">hello@akacons.vn</a><a href="tel:0900000000">0900 000 000</a><span>Việt Nam</span></div>
       <small>© 2026 AKACONS Surface Studio.</small>

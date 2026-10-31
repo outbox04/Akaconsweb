@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
+import { requireApiAdmin } from '@/lib/auth/authorization';
+import { materialImportSchema } from '@/lib/validation/admin';
+import { hasAcceptableJsonBody, isSameOrigin, noStoreJson } from '@/lib/security/request';
 
 const slugify = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/đ/g, 'd').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
@@ -11,6 +14,10 @@ type ImportItem = {
 
 export async function POST(request: Request) {
   try {
+    if (!isSameOrigin(request)) return noStoreJson({ error: 'Invalid request origin.' }, { status: 403 });
+    if (!hasAcceptableJsonBody(request, 1_000_000)) return noStoreJson({ error: 'Request body is too large.' }, { status: 413 });
+    const authorization = await requireApiAdmin();
+    if (!authorization.ok) return noStoreJson({ error: authorization.message }, { status: authorization.status });
     const supabase = createClient();
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return NextResponse.json({ error: 'Bạn cần đăng nhập tài khoản quản trị.' }, { status: 401 });
@@ -19,7 +26,9 @@ export async function POST(request: Request) {
     if (!roles?.some(role => ['super_admin', 'admin', 'manager'].includes(role.role_name))) {
       return NextResponse.json({ error: 'Tài khoản không có quyền quản trị vật liệu.' }, { status: 403 });
     }
-    const body = await request.json() as { items?: ImportItem[] };
+    const parsed = materialImportSchema.safeParse(await request.json());
+    if (!parsed.success) return noStoreJson({ error: 'Invalid material import payload.' }, { status: 400 });
+    const body = parsed.data as { items?: ImportItem[] };
     if (!body.items?.length) return NextResponse.json({ error: 'Danh sách sản phẩm trống.' }, { status: 400 });
 
     const upsertNode = async (name: string, kind: string, parentId: string | null, parentSlug = '') => {
@@ -49,8 +58,9 @@ export async function POST(request: Request) {
         if (colorError) throw colorError;
       }
     }
-    return NextResponse.json({ success: true, count: body.items.length });
+    return noStoreJson({ success: true, count: body.items.length });
   } catch (error) {
+    console.error('Material import failed', error);
     return NextResponse.json({ error: error instanceof Error ? error.message : 'Không thể nhập vật liệu.' }, { status: 500 });
   }
 }

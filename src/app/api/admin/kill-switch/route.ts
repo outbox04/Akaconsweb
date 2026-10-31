@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { requireApiAdmin } from '@/lib/auth/authorization';
 
 let isKillSwitchActive = false;
 
 export async function GET() {
+  const authorization = await requireApiAdmin();
+  if (!authorization.ok) return NextResponse.json({ error: authorization.message }, { status: authorization.status });
   return NextResponse.json({
     success: true,
     killSwitch: isKillSwitchActive,
@@ -11,6 +14,8 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   try {
+    const authorization = await requireApiAdmin();
+    if (!authorization.ok) return NextResponse.json({ error: authorization.message }, { status: authorization.status });
     const body = await request.json();
     if (typeof body.killSwitch === 'boolean') {
       isKillSwitchActive = body.killSwitch;

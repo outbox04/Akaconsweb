@@ -450,3 +450,47 @@
   .material-library h2 em:after{left:4px;top:5px}
   .library-grid span{font-size:12px}
 }
+
+/* Supplied AKACONS reference: visual system only. Finish/room controls remain intact. */
+.surface-home{--navy:#0d1d37;--teal:#3fb8b5;--mist:#f4f6f9;--ink:#f4f6f9;background:#0d1d37;color:#f4f6f9}
+.surface-nav{background:rgba(13,29,55,.92);box-shadow:0 1px 0 rgba(255,255,255,.1);backdrop-filter:blur(14px)}
+.surface-logo{color:#fff}.surface-logo img{filter:brightness(0) invert(1)}
+.surface-nav nav a{color:#d5dce6;font-size:13px;font-weight:300;letter-spacing:.08em}.surface-nav nav a:hover{color:#3fb8b5}
+.surface-nav>.nav-cta,.hero-copy>a,.ai-button{background:#006f6e;border-radius:2px;letter-spacing:.08em}.surface-nav>.nav-cta:hover,.hero-copy>a:hover,.ai-button:hover{background:#008d8c}
+.hero{background:#0d1d37}.hero-surfaces:after{background:linear-gradient(90deg,rgba(13,29,55,.96) 0%,rgba(13,29,55,.76) 43%,rgba(13,29,55,.25) 72%,rgba(13,29,55,.5) 100%)}
+.hero-copy{color:#f4f6f9}.hero .kicker,.signature .kicker,.material-library .kicker{color:#3fb8b5}.hero-copy>p:not(.kicker){color:#d5dce6}.hero h1,.signature h2,.material-library h2,.service h2,.contact h2{font-weight:300;letter-spacing:-.01em}.hero h2{color:#f4f6f9;font-weight:300}.finish-picker button{border-color:rgba(255,255,255,.75)}
+.signature{background:#0d1d37}.signature-surfaces:after{background:linear-gradient(90deg,rgba(13,29,55,.96),rgba(13,29,55,.83) 52%,rgba(13,29,55,.34))!important;backdrop-filter:none}.signature-copy{color:#f4f6f9}.signature-copy>p:nth-of-type(2){color:#d5dce6}.room-list button{color:#d5dce6}.room-list button.active{color:#fff}.signature-visual:after{background:linear-gradient(90deg,#0d1d37,transparent 44%)}.signature-visual span{background:#0d1d37e8;color:#f4f6f9}
+.material-library{background:#0d1d37!important;color:#f4f6f9}.material-library h2{color:#f4f6f9}.library-grid a{border:1px solid rgba(255,255,255,.14)}.library-grid a:after{background:linear-gradient(transparent,rgba(7,18,37,.95))}.service{background:#0d1d37}.service:after{background:linear-gradient(90deg,rgba(13,29,55,.97),rgba(13,29,55,.8) 45%,rgba(13,29,55,.18))}.contact{background:#006f6e}.contact a:first-child{color:#006f6e}
+@media(max-width:820px){.surface-nav nav{background:#0d1d37}.surface-nav nav a{color:#f4f6f9}.surface-nav .menu-toggle{color:#f4f6f9}.signature-surfaces:after{background:rgba(13,29,55,.85)!important}}
+
+/* Editorial content chapters from the supplied website reference. */
+.reference-wrap{width:min(1180px,calc(100% - 48px));margin:auto}.reference-eyebrow{margin:0;color:#3fb8b5;font-size:13px;letter-spacing:.16em;text-transform:uppercase}.reference-eyebrow:after{content:"";display:block;width:48px;height:1px;background:#3fb8b5;margin-top:12px}.reference-eyebrow.centered{text-align:center}.reference-eyebrow.centered:after{margin:12px auto 0}.reference-intro,.reference-services,.reference-projects,.reference-process{background:#0d1d37;color:#f4f6f9;padding:138px 0}.reference-intro{background:linear-gradient(90deg,rgba(13,29,55,.95),rgba(13,29,55,.78)),url('/reference/c3297477c7f619c76d0ecd6d37e95746.jpg') center/cover}.reference-intro-grid{display:grid;grid-template-columns:1fr 1.8fr;gap:8vw}.reference-intro h2,.reference-section-head h2{margin:0;font-size:clamp(40px,4.7vw,68px);font-weight:300;line-height:1.08}.reference-intro p:not(.reference-eyebrow){max-width:625px;color:#d5dce6;font-size:18px;line-height:1.8;margin:28px 0}.reference-link,.reference-outline{display:inline-flex;align-items:center;gap:12px;padding:12px 0;color:#f4f6f9;text-decoration:none;text-transform:uppercase;font-size:13px;letter-spacing:.1em;border-bottom:1px solid #3fb8b5}.reference-link:hover{color:#3fb8b5}.reference-stats{background:linear-gradient(180deg,rgba(13,29,55,.71),#0d1d37),url('/reference/8c1bfb9963794c47ef1091b83bbecb9e.jpg') center/cover;padding:140px 0;color:#f4f6f9}.reference-stat-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:58px}.reference-stat-grid article{text-align:center;padding:18px 32px}.reference-stat-grid article+article{border-left:1px solid rgba(255,255,255,.18)}.reference-stat-grid strong{display:block;font-size:clamp(56px,8vw,120px);font-weight:300;line-height:.95;letter-spacing:-.05em}.reference-stat-grid strong span{color:#3fb8b5;font-size:.5em;letter-spacing:0}.reference-stat-grid i{display:block;width:42px;height:1px;background:#3fb8b5;margin:26px auto}.reference-stat-grid p{margin:0;color:#d5dce6;font-size:16px}.reference-services{background:linear-gradient(180deg,rgba(13,29,55,.94),rgba(13,29,55,.91)),url('/reference/bf628f494ca4f0093e77fc70edf72a57.jpg') center/cover}.reference-section-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:60px}.reference-service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:38px}.reference-service-card{display:block;border:1px solid rgba(255,255,255,.16);color:#f4f6f9;text-decoration:none;background:#071225}.reference-service-card>span{height:390px;display:block;position:relative;overflow:hidden}.reference-service-card img,.reference-project-card img{object-fit:cover;transition:transform .7s ease}.reference-service-card:hover img,.reference-project-card:hover img{transform:scale(1.06)}.reference-service-card>div{padding:30px 34px}.reference-service-card h3{margin:0;font-size:42px;font-weight:300}.reference-service-card p{margin:8px 0 0;color:#b7c2d4;font-size:16px}.reference-projects{background:linear-gradient(180deg,rgba(10,24,48,.94),rgba(10,24,48,.97)),url('/reference/e3c9d59a77e099e7aeb935adea16d376.jpg') center/cover;overflow:hidden}.reference-outline{border:1px solid rgba(255,255,255,.4);padding:15px 23px}.reference-project-track{display:flex;gap:24px;width:max-content;padding-left:max(24px,calc((100vw - 1180px)/2));padding-right:24px}.reference-project-card{position:relative;width:420px;height:550px;overflow:hidden;background:#071225}.reference-project-card:after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,#071225eF)}.reference-project-card>div{position:absolute;z-index:2;left:30px;right:30px;bottom:28px}.reference-project-card small{color:#3fb8b5;text-transform:uppercase;letter-spacing:.15em}.reference-project-card h3{margin:10px 0 5px;font-size:30px;font-weight:300}.reference-project-card p{margin:0;color:#d5dce6}.reference-process{background:linear-gradient(90deg,rgba(13,29,55,.96),rgba(13,29,55,.78)),url('/reference/0586fb338f5c4be814d1038f6745f3e7.jpg') center/cover}.reference-process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}.reference-process-grid article{border-top:1px solid rgba(255,255,255,.18);padding:27px 12px 0 0}.reference-process-grid span{color:#3fb8b5;letter-spacing:.1em}.reference-process-grid h3{font-size:20px;font-weight:300;line-height:1.45;margin:14px 0}
+@media(max-width:820px){.reference-intro,.reference-services,.reference-projects,.reference-process{padding:80px 0}.reference-wrap{width:min(100% - 40px,1180px)}.reference-intro-grid,.reference-service-grid{grid-template-columns:1fr;gap:30px}.reference-section-head{align-items:flex-start;flex-direction:column;margin-bottom:38px}.reference-stat-grid{grid-template-columns:1fr;margin-top:35px}.reference-stat-grid article+article{border-left:0;border-top:1px solid rgba(255,255,255,.18);margin-top:26px;padding-top:40px}.reference-stat-grid strong{font-size:70px}.reference-service-card>span{height:280px}.reference-service-card h3{font-size:34px}.reference-project-card{width:78vw;height:450px}.reference-process-grid{grid-template-columns:1fr 1fr;gap:26px}.reference-intro p:not(.reference-eyebrow){font-size:16px}}
+
+/* About chapter: one focused, full-viewport introduction. */
+.reference-intro{
+  box-sizing:border-box;
+  min-height:calc(100vh - 80px);
+  min-height:calc(100dvh - 80px);
+  display:flex;
+  align-items:center;
+  padding:72px 0;
+  scroll-margin-top:80px;
+}
+.reference-intro-grid{width:min(1180px,calc(100% - 48px))}
+.reference-intro .reference-eyebrow{align-self:start}
+.reference-intro .reference-link{margin-top:8px}
+/* These figures repeated the About story as a separate sparse screen. */
+.reference-stats{display:none}
+
+@media(max-width:820px){
+  .reference-intro{
+    min-height:calc(100svh - 66px);
+    padding:56px 0;
+    align-items:flex-start;
+    scroll-margin-top:66px;
+  }
+  .reference-intro-grid{width:min(100% - 40px,1180px);gap:26px}
+  .reference-intro h2{font-size:clamp(36px,10vw,52px)}
+  .reference-intro p:not(.reference-eyebrow){margin:20px 0}
+}

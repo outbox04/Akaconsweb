@@ -24,8 +24,8 @@ export const renderJobSchema = z.object({
 export const computeEstimateSchema = z.object({
   areaM2: z.number().positive('Diện tích m² phải lớn hơn 0'),
   effectSystemId: z.string().min(1),
-  vatRate: z.number().default(10),
-  laborFee: z.number().default(0),
-  shippingFee: z.number().default(0),
-  discountAmount: z.number().default(0),
+  vatRate: z.number().finite().min(0).max(100).default(10),
+  laborFee: z.number().finite().min(0).max(10_000_000_000).default(0),
+  shippingFee: z.number().finite().min(0).max(10_000_000_000).default(0),
+  discountAmount: z.number().finite().min(0).max(10_000_000_000).default(0),
 });

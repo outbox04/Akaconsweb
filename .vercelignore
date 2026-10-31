@@ -1,0 +1,16 @@
+# Local build caches, server logs and visual QA artifacts are not deployment assets.
+.next*
+*.log
+artifact-reference.png
+cinematic-desktop.png
+cinematic-mobile.png
+hero-desktop.png
+hero-mobile-final.png
+hero-mobile-updated.png
+hero-mobile.png
+hero-no-overlap.png
+hero-tablet-final.png
+hero-tablet.png
+homepage-loaded.png
+homepage-preview.png
+library-fixed.png

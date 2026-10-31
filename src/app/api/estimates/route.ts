@@ -1,9 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { computePricingEstimate } from '@/lib/pricing-engine/optimize-packages';
 import { computeEstimateSchema } from '@/lib/validation/schemas';
+import { hasAcceptableJsonBody, isRateLimited, isSameOrigin, noStoreJson } from '@/lib/security/request';
 
 export async function POST(request: NextRequest) {
   try {
+    if (!isSameOrigin(request)) return noStoreJson({ success: false, error: 'Invalid request origin.' }, { status: 403 });
+    if (!hasAcceptableJsonBody(request, 32_000)) return noStoreJson({ success: false, error: 'Request body is too large.' }, { status: 413 });
+    if (isRateLimited(request, 'estimates', 30, 60_000)) return noStoreJson({ success: false, error: 'Too many requests. Please retry shortly.' }, { status: 429 });
     const body = await request.json();
 
     const validation = computeEstimateSchema.safeParse(body);
